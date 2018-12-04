@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "author": "Melanie Seltzer <melleh11@gmail.com>",
   "description": "Common Eslint and Prettier config for my projects",
-  "repository": "https://github.com/melanieseltzer/eslint-prettier-config",
+  "repository": "https://github.com/melanieseltzer/lint-config",
   "license": "MIT",
   "scripts": {
     "lint": "eslint 'src/**/*.js'",
