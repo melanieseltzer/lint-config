@@ -20,18 +20,19 @@
     "jquery": true,
     "jest": true
   },
-  "plugins": [
-    "prettier"
-  ],
+  "plugins": ["prettier"],
   "settings": {
     "react": {
       "version": "detect"
+    },
+    "import/resolver": {
+      "node": {
+        "extensions": [".js", ".jsx", ".ts", ".tsx"]
+      }
     }
   },
   "rules": {
-    "prettier/prettier": [
-      "error"
-    ],
+    "prettier/prettier": ["error"],
     "no-unused-vars": [
       "error",
       {
@@ -48,14 +49,7 @@
       "error",
       {
         "hoist": "all",
-        "allow": [
-          "resolve",
-          "reject",
-          "done",
-          "next",
-          "err",
-          "error"
-        ]
+        "allow": ["resolve", "reject", "done", "next", "err", "error"]
       }
     ],
     "no-underscore-dangle": "off",
@@ -75,22 +69,23 @@
     "react/jsx-filename-extension": [
       "warn",
       {
-        "extensions": [
-          ".js",
-          ".jsx",
-          ".tsx"
-        ]
+        "extensions": [".js", ".jsx", ".tsx"]
       }
     ]
   },
   "overrides": [
     {
-      "files": [
-        "*.ts",
-        "*.tsx"
-      ],
+      "files": ["*.js"],
+      "rules": {
+        "@typescript-eslint/no-unused-vars": "off"
+      }
+    },
+    {
+      "files": ["*.ts", "*.tsx"],
       "rules": {
         "no-unused-vars": "off",
+        "@typescript-eslint/explicit-function-return-type": "off",
+        "@typescript-eslint/prefer-interface": "off",
         "@typescript-eslint/no-explicit-any": "off",
         "@typescript-eslint/no-unused-vars": [
           2,
